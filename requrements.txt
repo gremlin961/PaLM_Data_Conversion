@@ -1,5 +1,0 @@
-fastapi[all]
-pydantic
-python-multipart
-google-cloud-aiplatform
-uvicorn
