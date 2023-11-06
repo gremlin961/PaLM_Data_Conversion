@@ -36,5 +36,4 @@ def GetData(PARAMETERS, TEMPLATE, DATA):
 		""",
 			**parameters
 	)
-	#converted_data = top_p
 	return response.text

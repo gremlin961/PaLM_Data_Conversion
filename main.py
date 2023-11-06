@@ -4,17 +4,16 @@
 # fastapi - Web service framework used to build the API
 # pydantic - Parsing library used to easily parse the provided json data to the API
 # typing - Primarliy using the Union function to handle optional json data passed to the API
-# GenImage - Custom library used to manage the generated AI images and layer them for the final banner
+# convert - Custom library used to submit form data to the PaLM text-bison model
 
 from fastapi import FastAPI, File, UploadFile, Request, HTTPException
 import uvicorn
 import shutil
-from fastapi.responses import HTMLResponse
+from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 import json
 from typing import List
 from pkg import convert
-
 
 
 app = FastAPI()
@@ -37,18 +36,9 @@ async def upload_multiple_files(files: List[UploadFile] = File(...)):
     data = json.loads(files[2].file.read())
 
     converted_data = convert.GetData(parameters, template, data)
+    
+    json_response = json.loads(converted_data)
+    print(type(json_response))
 
-    return converted_data
-    #return response
-
-
-
-#@app.post("/convert")
-#def upload_file(files: list[UploadFile]):
-    #if file.content_type != "application/json":
-        #raise HTTPException(400,detail="Invalid document type")
-    #else:
-        #data = json.loads(file.file.read())
-    #return {"content":data ,"filename":file.filename}
-
-
+    return JSONResponse(content=json_response)
+    #return converted_data
