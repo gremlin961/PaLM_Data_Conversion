@@ -1,9 +1,14 @@
 <html>
    <body>
-      <form action="http://localhost:8000/convert" method="POST" enctype="multipart/form-data">
-         <input type="file" name="files" />
-         <input type="file" name="files" />
-         <input type="file" name="files" />
+      <h1>Data Conversion Tool</h1>
+      <h2>Select the files to be used in the data conversion.</h2>
+      <form action="https://data-converter-v4nlhyh6zq-uc.a.run.app/convert" method="POST" enctype="multipart/form-data">
+         <p>Parameter File</p>
+         <input type="file" title="parameters file" name="files" />
+         <p>Template File</p>
+         <input type="file" title="template file" name="files" />
+         <p>Source Data File</p>
+         <input type="file" title="source data file" name="files" /><br><br>
          <input type="submit"/>
       </form>
    </body>
