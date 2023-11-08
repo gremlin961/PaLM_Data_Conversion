@@ -1,0 +1,26 @@
+{
+    "project": "my_project_123",
+    "prompt": "a dog riding a rocket",
+    "zone": "us-east4",
+    "bucket": "my_bucket",
+    "im_background_sz": "7987, 1024",
+    "im_background_color": "10, 60, 140",
+    "image1_pos": "100,0",
+    "i2_name": "SummerSalesEvent.png",
+    "i2_pos": "100,20",
+      "servlet": [   
+      {
+        "servlet-name": "cofaxCDS",
+        "servlet-class": "org.cofax.cds.CDSServlet",
+        "init-param": {
+          "configGlossary:installationAt": "Philadelphia, PA",
+          "configGlossary:adminEmail": "ksm@pobox.com"
+        }
+      }
+    ],
+    "img3_name": "corp-logo.png",
+    "img3_pos": "3700,100",
+    "other_stuff": "woohoo",
+    "welcome": "hello",
+    "banner_size": "648,60"
+  }

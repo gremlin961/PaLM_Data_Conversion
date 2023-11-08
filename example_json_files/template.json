@@ -1,0 +1,14 @@
+{
+    "project_id": "project_test",
+    "location": "us-central1",
+    "imagen_prompt": "a yellow purse on a mountain top",
+    "im_background_sz": "7987, 1024",
+    "im_background_color": "10, 60, 140",
+    "img_bucket": "this_is_my_gcs_bucket",
+    "img2_name": "SummerSalesEvent.png",
+    "img3_name": "corp-logo.png",
+    "img1_pos": "100,0",
+    "img2_pos": "1300,20",
+    "img3_pos": "3500,200",
+    "banner_size": "648,60"
+  }

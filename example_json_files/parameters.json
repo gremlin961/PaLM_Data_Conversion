@@ -1,0 +1,14 @@
+{
+    "project_id": "CHANGE_THIS_TO_YOUR_PROJECT_ID",
+    "location": "us-central1",
+    "model": "text-bison",
+    "parameters": {
+      "candidate_count": 1,
+      "max_output_tokens": 1024,
+      "temperature": 0.2,
+      "top_p": 0.8,
+      "top_k": 40
+    },
+    "context":"This is the template to use for your standard json format. All values in the template are required. Add any unknown items that are not in the teamplate to a new array named NotSure as key value pairs. Your standard json format is: ",
+    "prompt": "convert the following into your standard json format: "
+  }
