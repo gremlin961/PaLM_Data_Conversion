@@ -1,5 +1,6 @@
+google-cloud-aiplatform
+google-cloud-secret-manager
 fastapi[all]
 pydantic
 python-multipart
-google-cloud-aiplatform
 uvicorn
