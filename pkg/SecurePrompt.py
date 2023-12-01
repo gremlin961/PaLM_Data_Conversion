@@ -28,6 +28,7 @@ def GetValue(PROJECT_ID, SECRET_ID, SECRET_VERSION='latest'):
     secVer = f"{secPath.name}/versions/{version}"
     secValue = secClient.access_secret_version(request={"name": secVer})
     
+    # Store the data in variable named payload and return it to the calling module
     payload = secValue.payload.data.decode("UTF-8")
     
     return payload

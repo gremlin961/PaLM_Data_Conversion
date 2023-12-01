@@ -15,14 +15,15 @@ import json
 # The GetData function uses paramerters provided by the user to interact with a backend GenAI model
 def GetData(PARAMETERS, TEMPLATE, DATA):
 
-    # Define the needed parameters provided in the parameters.json file.
+    # Define the needed parameters provided in the parameters.json file. 
+    # --YOU WILL NEED TO UPDATE THE parameters.json TEMPLATE FILE WITH YOUR OWN PROJECT ID AND SECRET ID NAMES--
     project_id = PARAMETERS['project_id']
     location = PARAMETERS['location']
     model = PARAMETERS['model']
     secret_id = PARAMETERS['secret_id']
     secret_ver = PARAMETERS['secret_ver']
     
-    # Pull the prompt data and parameters from GCP Secret Manager
+    # Pull the prompt data and parameters from GCP Secret Manager. This data is stored in the same json format as the my-prompts library in the Vertex Language console.
     data = SecurePrompt.GetValue(project_id, secret_id, secret_ver)
     values = json.loads(data)
     
