@@ -7,28 +7,29 @@
 
 import vertexai
 from vertexai.language_models import TextGenerationModel
-import SecurePrompt 
+from pkg import SecurePrompt 
 import json
 
 
+def runme():
 
-
-# Define the needed parameters provided in the parameters.json file.
-project_id = 'rkiles-demo-host-vpc'
-location = 'us-central1'
-model = 'text-bison'
-secret_id = 'secure_prompt-demo'
-secret_ver = 'latest'
+    # Define the needed parameters provided in the parameters.json file.
+    project_id = 'rkiles-demo-host-vpc'
+    location = 'us-central1'
+    model = 'text-bison'
+    secret_id = 'secure_prompt-demo'
+    secret_ver = 'latest'
     
-data = SecurePrompt.GetValue(project_id, secret_id, secret_ver)
-values = json.loads(data)
+    data = SecurePrompt.GetValue(project_id, secret_id, secret_ver)
+    values = json.loads(data)
 
+    return values['context']
 
-print(values['parameters']['candidateCount'])
-print(values['parameters']['tokenLimits'])
-print(values['parameters']['temperature'])
-print(values['parameters']['topP'])
-print(values['parameters']['topK'])
-print(values['parameters']['topK'])
-print(values['context'])
-print(values['testData'][0]['inputs'][0])
+#print(values['parameters']['candidateCount'])
+#print(values['parameters']['tokenLimits'])
+#print(values['parameters']['temperature'])
+#print(values['parameters']['topP'])
+#print(values['parameters']['topK'])
+#print(values['parameters']['topK'])
+#print(values['context'])
+#print(values['testData'][0]['inputs'][0])

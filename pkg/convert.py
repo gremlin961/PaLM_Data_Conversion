@@ -8,7 +8,7 @@
 
 import vertexai
 from vertexai.language_models import TextGenerationModel
-import SecurePrompt 
+from pkg import SecurePrompt 
 import json
 
 
