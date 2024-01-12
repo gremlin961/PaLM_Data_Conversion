@@ -1,5 +1,5 @@
 # JSON Data Converter using GenAI 
-# Leverate GenAI to convert dissimilar json data files to a standard format
+# Leverage GenAI to convert dissimilar json data files to a standard format
 
 
 LLM’s provide application developers with the ability to augment and even replace large sections of their codebase with simple and intuitive prompts, which are natural-language queries that guides a model to produce a desired response. Instead of using numerous For loops, If blocks, and try-except statements, developers can harness LLM’s to produce a desired result simply by providing a level of context and a statement of the expected outcome.
